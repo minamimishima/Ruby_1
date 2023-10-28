@@ -11,7 +11,7 @@ if memo_type == 1
   CSV.open("#{file_name}.csv","w") do |csv|
     puts "メモしたい内容を記入してください"
     puts "完了したらctrl+Dを押します"
-    memo = gets.chomp
+    memo = $stdin.read
     csv << [memo]
   end
   
@@ -22,10 +22,10 @@ elsif memo_type == 2
     CSV.open("#{file_name}.csv","a") do |csv|
       puts "メモしたい内容を入力してください"
       puts "完了したらctrl+Dを押します"
-      memo = gets.chomp
+      memo = $stdin.read
       csv << [memo]
     end
     
-  else
+else
     puts "1か2で入力してください！"
 end
