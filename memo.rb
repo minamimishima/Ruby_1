@@ -27,5 +27,5 @@ elsif memo_type == 2
     end
     
   else
-    puts "1か2で入力してね！"
+    puts "1か2で入力してください！"
 end
